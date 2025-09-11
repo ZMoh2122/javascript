@@ -23,4 +23,8 @@ switch (age) {
 
   default:
     console.log("Your age is not listed");
-}
+} 
+
+
+
+
