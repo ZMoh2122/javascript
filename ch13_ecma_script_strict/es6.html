@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 Practice</title>
+</head>
+<body>
+  <h1>Open the Console to See ES6 Examples</h1>
+  <script>
+    // 1. let and const
+    let name = "Zakariya";   // can be reassigned
+    name = "Zaki";
+    const country = "USA";   // cannot be reassigned
+    console.log("Name:", name, "Country:", country);
+
+    // 2. Arrow Functions
+    const addArrow = (a, b) => a + b;
+    console.log("Arrow Function:", addArrow(2, 3));
+
+    // 3. Template Literals
+    const age = 17;
+    console.log(`My name is ${name} and I am ${age} years old.`);
+
+    // 4. Default Parameters
+    function greet(user = "Guest") {
+      return `Hello, ${user}!`;
+    }
+    console.log(greet());
+    console.log(greet("Zaki"));
+
+    // 5. Destructuring
+    const colors = ["red", "green", "blue"];
+    const [first, second] = colors;
+    console.log("Array Destructuring:", first, second);
+
+    const person = { username: "Zakariya", level: "Beginner" };
+    const { username, level } = person;
+    console.log("Object Destructuring:", username, level);
+
+    // 6. Spread Operator
+    const arr1 = [1, 2, 3];
+    const arr2 = [...arr1, 4, 5];
+    console.log("Spread Array:", arr2);
+
+    const obj1 = { a: 1, b: 2 };
+    const obj2 = { ...obj1, c: 3 };
+    console.log("Spread Object:", obj2);
+
+    // 7. Rest Parameters
+    function sum(...numbers) {
+      return numbers.reduce((total, num) => total + num, 0);
+    }
+    console.log("Rest Parameters Sum:", sum(1, 2, 3, 4));
+
+    // 8. Classes
+    class Animal {
+      constructor(name) {
+        this.name = name;
+      }
+      speak() {
+        console.log(`${this.name} makes a sound.`);
+      }
+    }
+
+    class Dog extends Animal {
+      speak() {
+        console.log(`${this.name} barks.`);
+      }
+    }
+
+    const dog = new Dog("Buddy");
+    dog.speak();
+
+    // 9. Promises + async/await
+    const fetchData = () => {
+      return new Promise((resolve) => {
+        setTimeout(() => resolve("Data loaded!"), 1000);
+      });
+    };
+
+    async function getData() {
+      const result = await fetchData();
+      console.log("Async/Await:", result);
+    }
+    getData();
+  </script>
+</body>
+</html>
