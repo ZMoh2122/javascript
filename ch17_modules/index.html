@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Cart — Modules</title>
+  <style>
+    body{font-family:system-ui,Arial;display:flex;justify-content:center;padding:24px;background:#f4f6f9;}
+    .card{width:760px;background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .cols{display:flex;gap:20px}
+    .col{flex:1}
+    ul{list-style:none;padding:0;margin:0}
+    li{display:flex;justify-content:space-between;padding:8px 6px;border-bottom:1px solid #eee}
+    button{background:#0b84ff;color:white;border:none;padding:6px 10px;border-radius:6px;cursor:pointer}
+    .small{font-size:13px;color:#666}
+    .summary{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <header>
+      <h1>🛒 Mini Cart (modules)</h1>
+      <div class="small">Files: index.html • cart.js • main.js</div>
+    </header>
+
+    <div class="cols">
+      <section class="col">
+        <h2>Products</h2>
+        <ul id="product-list"></ul>
+      </section>
+
+      <section class="col">
+        <h2>Your Cart</h2>
+        <ul id="cart-list"></ul>
+
+        <div class="summary">
+          <div class="small">Items: <strong id="cart-count">0</strong></div>
+          <div class="small">Total: $<strong id="cart-total">0.00</strong></div>
+        </div>
+
+        <div style="margin-top:10px">
+          <button id="clear-cart">Clear cart</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- main.js is the entry module -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
